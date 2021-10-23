@@ -1,0 +1,68 @@
+alpha = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+i = 0;
+setInterval(()=>{
+    if (i >= 26)
+        return;
+    x = "flag{dhonv" + alpha[i] + "icab}";
+    fetch("https://hack.lug.ustc.edu.cn/", { "headers": { "content-type": "application/x-www-form-urlencoded" },
+        "body": "csrfmiddlewaretoken=aQU97l5Jkpar80GmIiNZdLpY3yOwjqReazvYhbpWUCjVYShkGN2B95GtB9ipbqkJ&challenge=17&flag=" + x,
+        "method": "POST",
+    });
+    i += 1;
+}, 20000)
+
+flag{phonvticab}
+
+flag{dhonvaicab} x
+flag{dhonvbicab} x
+flag{dhonvcicab} x
+flag{dhonvdicab} x
+flag{dhonveicab} x
+flag{dhonvficab} x
+flag{dhonvgicab} x
+flag{dhonvhicab} x
+flag{dhonviicab} x
+flag{dhonvjicab} x
+flag{dhonvkicab} x
+flag{dhonvlicab} x
+flag{dhonvmicab} x
+flag{phonvaicab} x
+flag{phonvbicab} x
+flag{phonvcicab} x
+flag{phonvdicab} x
+flag{phonveicab} x
+flag{phonvficab} x
+flag{phonvgicab} x
+flag{phonvhicab} x
+flag{phonviicab} x
+flag{phonvjicab} x
+flag{phonvkicab} x
+flag{phonvlicab} x
+flag{phonvmicab} x
+
+
+flags = [];
+for (let i = 0; i < 26; i++) {
+    for (let j = 0; j < 26; j++) {
+        flags.push(alpha[i]+"h"+alpha[j]+"ndticab");
+    }
+}
+i = 0;
+function doit() {
+    if (i < flags.length) {
+        fetch("https://hack.lug.ustc.edu.cn/", { "headers": { "content-type": "application/x-www-form-urlencoded" },
+            "body": "csrfmiddlewaretoken=aQU97l5Jkpar80GmIiNZdLpY3yOwjqReazvYhbpWUCjVYShkGN2B95GtB9ipbqkJ&challenge=17&flag=" + flags[i],
+            "method": "POST",
+        });
+        i += 1;
+        setTimeout(doit, 10000);
+    }
+}
+
+fetch("https://hack.lug.ustc.edu.cn/", {
+  "headers": {
+    "content-type": "application/x-www-form-urlencoded",
+  },
+  "body": "csrfmiddlewaretoken=aQU97l5Jkpar80GmIiNZdLpY3yOwjqReazvYhbpWUCjVYShkGN2B95GtB9ipbqkJ&challenge=17&flag=",
+  "method": "POST",
+});
