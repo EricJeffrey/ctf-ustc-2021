@@ -11,8 +11,16 @@ setInterval(()=>{
     i += 1;
 }, 20000)
 
-flag{phonvticab}
+flag{phoneticab} √
+flag{phonvticab} x
+flag{bacitvnohp} x
+flag{dhonvticab} x
+flag{phondticab} x
+flag{dhondticab} x
 
+flag{dhxnvticab} x
+flag{phonvticab} x
+flag{phondticab} x
 flag{dhonvaicab} x
 flag{dhonvbicab} x
 flag{dhonvcicab} x
