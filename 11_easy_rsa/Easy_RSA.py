@@ -1,6 +1,7 @@
 import math
 import sympy
 from Crypto.Util.number import *
+from sympy.ntheory.primetest import isprime
 
 e = 65537
 
@@ -10,6 +11,7 @@ def get_p():
     y = 11124440021748127159092076861405454814981575144744508857178576572929321435002942998531420985771090167262256877805902135304112271641074498386662361391661439
     value_p = sympy.nextprime((math.factorial(y)) % x)  # Hint：这里直接计算会溢出，请你仔细观察 x 和 y 的特征
     return value_p
+
 
 
 def get_q():
