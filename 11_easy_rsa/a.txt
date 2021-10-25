@@ -5,3 +5,9 @@
 2.一次同余方程组
 
 3.模逆运算Modular Inverse
+
+4.https://baike.baidu.com/item/%E6%95%B0%E8%AE%BA%E5%9B%9B%E5%A4%A7%E5%AE%9A%E7%90%86/4751986
+
+5.https://www.freebuf.com/articles/others-articles/161475.html
+
+6.根据欧拉定理计算
