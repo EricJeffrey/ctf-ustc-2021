@@ -1,0 +1,16 @@
+da1.img 和 day2.img masterkey一样
+
+0. parted day*.img
+   U -> B -> print -> 获得offset
+0.1 losetup --offset <offset> /deve/loopxx
+0.3 cryptset open /dev/loopxx <name> 会让输入密码并且在/dev/mapper/中创建<name>的路径
+0.4 使用 mount 挂载到特定文件夹就行了
+
+1. cryptsetup luksDump --dump-master-key /dev/loop31 拿到masterkey 4*16个16进制
+   be 97 db 91 5c 30 47 ce 1c 59 c5 c0 8c 75 3c 40
+   72 35 85 9d fe 49 c0 52 c4 f5 26 60 af 3e d4 2c
+   ec a3 60 53 aa 96 70 4d f3 f2 ff 56 8f 49 a1 82
+   60 18 7c 58 d7 6a ec e8 00 c1 90 c1 88 43 f8 9a
+2. 将masterkey写入到binary文件
+3. 利用cryptsetup luksAddKey --master-key-file=./masterkey /dev/loop32添加一个key
+4. 打开然后挂载，如上0.x
