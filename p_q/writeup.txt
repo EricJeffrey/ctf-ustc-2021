@@ -1,0 +1,4 @@
+1. librosa包含梅尔频谱(melspectrogram)的反向
+2. 克罗内克积可以通过步长的方式逆变换
+3. PILLOW读取gif图，红白像素代表power_to_db之后的值
+4. 反向操作得到音频
