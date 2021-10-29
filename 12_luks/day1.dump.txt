@@ -1,0 +1,73 @@
+LUKS header information
+Version:        2
+Epoch:          3
+Metadata area:  16384 [bytes]
+Keyslots area:  16744448 [bytes]
+UUID:           e9a660d5-4a91-4dca-bda5-3f6a49eea998
+Label:          (no label)
+Subsystem:      (no subsystem)
+Flags:          (no flags)
+
+Data segments:
+  0: crypt
+        offset: 16777216 [bytes]
+        length: (whole device)
+        cipher: aes-xts-plain64
+        sector: 512 [bytes]
+
+Keyslots:
+  0: luks2
+        Key:        512 bits
+        Priority:   normal
+        Cipher:     aes-xts-plain64
+        Cipher key: 512 bits
+        PBKDF:      pbkdf2
+        Hash:       sha256
+        Iterations: 1581562
+        Salt:       b6 95 26 1a d3 8d bb 51 fb 78 c2 1b 87 6b 9f 5a
+                    66 10 4c 01 8f ae eb 30 53 c4 93 03 fd 1a 68 d6
+        AF stripes: 4000
+        AF hash:    sha256
+        Area offset:32768 [bytes]
+        Area length:258048 [bytes]
+        Digest ID:  0
+Tokens:
+Digests:
+  0: pbkdf2
+        Hash:       sha256
+        Iterations: 104857
+        Salt:       3c f9 97 83 b9 08 0e b0 c8 ee b5 cc 63 f1 79 1f
+                    1f df a5 11 cc 6e 48 53 b9 04 24 36 a4 4b 8d 55
+        Digest:     67 59 6a 45 a1 a1 6a 8e 09 75 71 5c b6 3c 83 9f
+                    6c 00 ad d0 a4 df fe 9a 13 01 70 f8 de 03 a2 2b
+
+
+
+
+LUKS header information for /dev/loop31
+
+Version:        1
+Cipher name:    aes
+Cipher mode:    xts-plain64
+Hash spec:      sha256
+Payload offset: 32768
+MK bits:        512
+MK digest:      67 59 6a 45 a1 a1 6a 8e 09 75 71 5c b6 3c 83 9f 6c 00 ad d0
+MK salt:        3c f9 97 83 b9 08 0e b0 c8 ee b5 cc 63 f1 79 1f
+                1f df a5 11 cc 6e 48 53 b9 04 24 36 a4 4b 8d 55
+MK iterations:  104857
+UUID:           e9a660d5-4a91-4dca-bda5-3f6a49eea998
+
+Key Slot 0: ENABLED
+        Iterations:             1581562
+        Salt:                   b6 95 26 1a d3 8d bb 51 fb 78 c2 1b 87 6b 9f 5a
+                                66 10 4c 01 8f ae eb 30 53 c4 93 03 fd 1a 68 d6
+        Key material offset:    8
+        AF stripes:             4000
+Key Slot 1: DISABLED
+Key Slot 2: DISABLED
+Key Slot 3: DISABLED
+Key Slot 4: DISABLED
+Key Slot 5: DISABLED
+Key Slot 6: DISABLED
+Key Slot 7: DISABLED
